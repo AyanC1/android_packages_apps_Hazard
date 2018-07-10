@@ -28,7 +28,7 @@
 
     <PreferenceScreen
         android:key="misc_lockscreen"
-        android:icon="@drawable/ic_settings_miscs"
+        android:icon="@drawable/ic_settings_lockscreen_miscs"
         android:title="@string/lockscreen_misc_selection_title"
         android:summary="@string/lockscreen_misc_selection_summary"
         android:fragment="com.toxyc.hazard.fragments.LockscreenMisc" />
