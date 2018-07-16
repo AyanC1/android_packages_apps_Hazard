@@ -17,11 +17,17 @@
 package com.toxyc.hazard.fragments;
 
 
+import android.app.Activity;
 import android.app.ActivityManagerNative;
 import android.content.Context;
 import android.content.ContentResolver;
+import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.RemoteException;
@@ -38,9 +44,18 @@ import android.view.IWindowManager;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.toxyc.hazard.preference.SecureSettingSwitchPreference;
+import com.toxyc.hazard.preference.SystemSettingSwitchPreference;
+import com.toxyc.hazard.preference.CustomSeekBarPreference;
+
 import java.util.Locale;
 import android.text.TextUtils;
 import android.view.View;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -48,6 +63,13 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.Utils;
 
 public class MiscSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+
+    private static final String SYSUI_ROUNDED_SIZE = "sysui_rounded_size";
+    private static final String SYSUI_ROUNDED_CONTENT_PADDING = "sysui_rounded_content_padding";
+
+    private Context mContext;
+    private CustomSeekBarPreference mCornerRadius;
+    private CustomSeekBarPreference mContentPadding;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,6 +79,20 @@ public class MiscSettings extends SettingsPreferenceFragment implements OnPrefer
 
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefSet = getPreferenceScreen();
+
+        // Rounded Corner Radius
+        mCornerRadius = (CustomSeekBarPreference) findPreference(SYSUI_ROUNDED_SIZE);
+        int cornerRadius = Settings.Secure.getInt(getContentResolver(),
+                Settings.Secure.SYSUI_ROUNDED_SIZE, 25);
+        mCornerRadius.setValue(cornerRadius / 1);
+        mCornerRadius.setOnPreferenceChangeListener(this);
+
+        // Rounded Content Padding
+        mContentPadding = (CustomSeekBarPreference) findPreference(SYSUI_ROUNDED_CONTENT_PADDING);
+        int contentPadding = Settings.Secure.getInt(getContentResolver(),
+                Settings.Secure.SYSUI_ROUNDED_CONTENT_PADDING, 10);
+        mContentPadding.setValue(contentPadding / 1);
+        mContentPadding.setOnPreferenceChangeListener(this);
 
     }
 
@@ -71,7 +107,16 @@ public class MiscSettings extends SettingsPreferenceFragment implements OnPrefer
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
-        return false;
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mCornerRadius) {
+            int value = (Integer) newValue;
+            Settings.Secure.putInt(getContentResolver(),
+                Settings.Secure.SYSUI_ROUNDED_SIZE, value * 1);
+        } else if (preference == mContentPadding) {
+            int value = (Integer) newValue;
+            Settings.Secure.putInt(getContentResolver(),
+                Settings.Secure.SYSUI_ROUNDED_CONTENT_PADDING, value * 1);
+        }
+        return true;
     }
 }

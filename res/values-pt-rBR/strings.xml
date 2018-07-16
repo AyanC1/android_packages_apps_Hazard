@@ -314,4 +314,12 @@
   <string name="button_timeout_title">Tempo de espera da luz de fundo</string>
   <string name="button_backlight_on_touch_only_title">Luz de fundo ao toque</string>
   <string name="button_backlight_on_touch_only_summary">A luz de fundo irá aparecer ao toque dos botões ao invés de o tempo todo. O tempo de espera ainda influência nesse recurso.</string>
+
+  <!-- Round Corner Radius -->
+  <string name="corners_category">Cantos</string>
+  <string name="corner_radius">Raios dos Cantos Arredondado</string>
+  <string name="content_padding">Preenchimento de conteúdo de canto</string>
+  <string name="corner_fwvals">Use valores da framework</string>
+  <string name="corner_fwvals_summary">Útil se o dispositivo realmente tiver cantos arredondados</string>
+
 </resources>
