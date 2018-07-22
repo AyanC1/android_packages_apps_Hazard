@@ -41,4 +41,10 @@
         android:title="@string/system_category"
         app:showAsAction="ifRoom|withText"/>
 
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/main_about"
+        android:title="@string/about_category"
+        app:showAsAction="ifRoom|withText"/>
+
 </menu>

@@ -37,6 +37,7 @@ import com.toxyc.hazard.tabs.StatusBar;
 import com.toxyc.hazard.tabs.Recents;
 import com.toxyc.hazard.tabs.Lockscreen;
 import com.toxyc.hazard.tabs.System;
+import com.toxyc.hazard.tabs.About;
 
 public class HazardSettings extends SettingsPreferenceFragment {
 
@@ -76,6 +77,9 @@ public class HazardSettings extends SettingsPreferenceFragment {
                         return true;
                     case R.id.system:
                         viewPager.setCurrentItem(3);
+                        return true;
+                    case R.id.about:
+                        viewPager.setCurrentItem(4);
                         return true;
                 }
                 return false;
@@ -117,6 +121,7 @@ public class HazardSettings extends SettingsPreferenceFragment {
             frags[1] = new Recents();
             frags[2] = new Lockscreen();
             frags[3] = new System();
+            frags[4] = new About();
         }
 
         @Override
@@ -141,7 +146,8 @@ public class HazardSettings extends SettingsPreferenceFragment {
                     getString(R.string.status_bar_category),
                     getString(R.string.recents_category),
                     getString(R.string.lockscreen_category),
-                    getString(R.string.system_category)};
+                    getString(R.string.system_category),
+                    getString(R.string.about_category)};
 
         return titleString;
     }

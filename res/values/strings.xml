@@ -57,6 +57,26 @@
     <string name="button_settings">Buttons</string>
     <string name="navbar_category">Navigation bar</string>
 
+    <!-- about categorie -->
+    <string name="about_category">About</string>
+    <string name="about_category_summary">A little about our team and our purpose</string>
+    <string name="about_toxyc">ToxycOS</string>
+    <string name="about_toxyc_discription">Who we are?\nWe are the ToxycOS team, an organized and Brazilian team that aims to jointly develop a clean and useful Android operational system.\nWe value pure android, but it always looks more beautiful with more details, does not it?\nWe offer a simple and easy menu for customization of your device, we value a clean and direct interface, try in your device possibilities of customizations and a good experience.\nWe offer useful resources for your day-to-day life. Updated every month with security patch according to Google.\nOur ROM offers a theme engine for you to customize to your liking, our philosophy is to deliver a stable ROM with useful features and we cherish a lightweight interface prioritizing performance and battery for your device.</string>
+    <string name="jbcdroid_name">JBCDroid</string>
+    <string name="jbcdroid_discription">Founder | Lead Developer | Maintainer</string>
+    <string name="esrom_name">EsromTech</string>
+    <string name="esrom_discription">Co-Lead Developer | Maintainer</string>
+    <string name="rkschunk_name">RKSchunk</string>
+    <string name="rkschunk_discription">Tester of Feature | Maintainer</string>
+    <string name="matheeusaf_name">Matheeusaf</string>
+    <string name="matheeusaf_discription">Website Creator | Website Manager</string>
+    <string name="kley_name">Kley76</string>
+    <string name="kley_discription">Designer</string>
+    <string name="joshua_name">Joshua M.</string>
+    <string name="joshua_discription">Designer | Maintainer</string>
+    <string name="zjr_name">ZJRDroid</string>
+    <string name="zjr_discription">Social Networks | Maintainers Manager</string>
+
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
