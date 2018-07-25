@@ -113,4 +113,44 @@
         </attr>
     </declare-styleable>
 
+    <!-- Spring Floating Action Menu -->
+    <declare-styleable name="SpringFloatingActionMenu">
+        <attr name="sfam_colorPressed" format="color" />
+        <attr name="sfam_colorNormal" format="color" />
+        <attr name="sfam_colorRipple" format="color" />
+        <attr name="sfam_colorDisabled" format="color" />
+        <attr name="sfam_shadow" format="boolean" />
+        <attr name="sfam_size" format="enum" >
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+        <attr name="sfam_position" format="enum" >
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+        <attr name="sfam_icon" format="reference" />
+        <attr name="sfam_reveal_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="MenuItemView" >
+        <attr name="miv_diameter" format="dimension"/>
+        <attr name="miv_color" format="color"/>
+        <attr name="miv_icon" format="reference"/>
+        <attr name="miv_text" format="string"/>
+        <attr name="miv_textColor" format="color"/>
+        <attr name="miv_textSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="FloatingActionButton">
+        <attr name="fab_colorPressed" format="color" />
+        <attr name="fab_colorNormal" format="color" />
+        <attr name="fab_colorRipple" format="color" />
+        <attr name="fab_colorDisabled" format="color" />
+        <attr name="fab_shadow" format="boolean" />
+        <attr name="fab_type" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+    </declare-styleable>
+
 </resources>

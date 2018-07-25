@@ -33,4 +33,17 @@
     <color name="bottom_nav_text_icon_active">@*android:color/bottom_nav_icon_active</color>
     <color name="bottom_nav_text_icon_inactive">@*android:color/bottom_nav_icon_inactive</color>
 
+    <color name="colorPrimary">@*android:color/BottomBarBackground</color>
+
+    <color name="fab_statusbar">#d75f45</color>
+    <color name="fab_recents">#559fca</color>
+    <color name="fab_lockscreen">#f0983c</color>
+    <color name="fab_system">#5abb8b</color>
+
+    <color name="fab">@*android:color/accent_device_default_light</color>
+
+    <color name="text_color">@*android:color/about_text_color_primary</color>
+
+    <color name="material_blue_500">@*android:color/accent_device_default_light</color>
+
 </resources>

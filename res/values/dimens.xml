@@ -39,4 +39,16 @@
     <!-- Shortcut picker -->
     <dimen name="shortcut_picker_left_padding">70dip</dimen>
 
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="fab_size_normal">62dp</dimen>
+    <dimen name="fab_size_mini">46dp</dimen>
+    <dimen name="fab_shadow_size">18dp</dimen>
+
+    <dimen name="fab_scroll_threshold">8dp</dimen>
+    <dimen name="fab_elevation_lollipop">12dp</dimen>
+    <dimen name="fab_press_translation_z">10dp</dimen>
+
 </resources>
